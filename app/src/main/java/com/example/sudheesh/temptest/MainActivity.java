@@ -19,8 +19,9 @@ public class MainActivity extends AppCompatActivity {
         WebSettings webSettings = web.getSettings();
         webSettings.setJavaScriptEnabled(true);
         web.loadUrl("http://www.inzenjer.somee.com");
-        web.setWebViewClient(new WebViewClient());
+        web.setWebViewClient(new WebViewClient()); // to open links in webview client rather than external browser
     }
+    //to nagivate to recent page when back button is pressed
     @Override
     public void onBackPressed() {
         if(web.canGoBack()) {
